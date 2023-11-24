@@ -1,0 +1,95 @@
+body {
+  
+  font-family: Arial, sans-serif;
+  background-image: url("../src/imagem/logo.png");
+  background-position:5% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: blue;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 25px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: blue;
+}
+
+h1 {
+  font-size: 45px;
+  color: blueviolet;
+  text-shadow: 10px 20px 20px rgba(0, 0, 0, 0.749);
+}
+
+a:hover {
+  background-color: blue;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button,
+input[type='submit'] {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.container-login {
+  width: 300px;
+  background-color: blueviolet;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 150px auto 0 auto;
+}
+
+
+.mensagem-erro {
+  padding: 5px 10px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+}

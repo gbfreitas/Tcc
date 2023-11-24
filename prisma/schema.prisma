@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../datasource/database.db"
+}
+
+model Ambiente {
+  id               Int       @id @default(autoincrement())
+  nome             String
+  ambiente_privado Boolean
+  acessos          Acesso[]
+  reservas         Reserva[]
+}
+
+model Usuario {
+  id          Int       @id @default(autoincrement())
+  email       String    @unique
+  senha       String
+  nome        String
+  apartamento String
+  bloco       String
+  acessos     Acesso[]
+  reservas    Reserva[]
+}
+
+model Acesso {
+  id             Int       @id @default(autoincrement())
+  id_espaco      Int
+  id_morador     Int
+  codigo_acesso  String
+  qrcode_acesso  String
+  data_expiracao DateTime
+  Ambiente       Ambiente? @relation(fields: [id_espaco], references: [id])
+  Usuario        Usuario?  @relation(fields: [id_morador], references: [id])
+}
+
+model Reserva {
+  id         Int       @id @default(autoincrement())
+  id_espaco  Int
+  id_morador Int
+  data       DateTime
+  Ambiente   Ambiente? @relation(fields: [id_espaco], references: [id])
+  Usuario    Usuario?  @relation(fields: [id_morador], references: [id])
+}
